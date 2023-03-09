@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+/*////////////Login.js styling/////////////*/
+
+.cover{
+    margin: auto;
+    background-color: white;
+    width: 30em;
+    position: relative;
+    border-radius: 1em;
+    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+}
+
+.cover input{
+    border: none;
+    background-color: rgb(229, 226, 226);
+    border-radius: 0.25em;
+    text-align: center;
+    padding: 0.7em;
+    width: 80%;
+}
+
+.cover input:focus{
+    outline-color: rgb(32, 177, 225);
+}
+
+.login-btn{
+    width: 40%;
+    background-color: rgb(32, 177, 225);
+    transition: 1s;
+    border-radius: 0.25em;
+}
+
+.login-btn:hover{
+    transform: scale(1.25);
+}
+/*///////////Inventory.js styling////////////*/
+
+header{
+    display: flex;
+    max-width: 1200px;
+    min-width: 450px;
+    margin: 70px auto;
+}
+
+header h3{
+    margin-top: 12px;
+}
+
+header .btn{
+    margin-left: auto;
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 6px 11px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+    transition: 0.5s;
+}
+
+h1{
+    text-align: center;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border: 1px solid steelblue;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.inStock{
+    border-left: 5px solid blue;
+}
+
+.item {
+    background: #f4f4f4;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/*////Table styling//////*/
+
+.table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border: 2px solid forestgreen;
+    width: 1000px;
+    height: auto;
+    line-height: 50px;
+    margin-bottom: 30px;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+    
+td {
+    text-align: center;
+}
+
+
+/*////////ADD ITEM.JS STYLING///////////*/
+.add-form {
+    margin: auto auto;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    width: 350px;
+    height: 400px;
+}
+
+.form-control {
+    margin: 40px auto;
+
+}
+
+.form-control label {
+    display: block;
+}
+
+.form-control input {
+    width: 100%;
+    height: 35px;
+    font-size: 17px;
+}
+
+.form-control-check{
+    width: 300px;
+    margin: auto;
+    margin: 10px auto;
+}
+
+.form-control-check input{
+    height: 20px;
+}
+
+form .btn{
+    display: block;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+form .btns{
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+form .cancelbtn{
+    background-color: red;
+}
+
