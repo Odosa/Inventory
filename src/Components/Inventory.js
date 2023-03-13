@@ -13,7 +13,7 @@ const [tableData, setTableData] = useState(
         {
             id: 1,
             item: "Hat", 
-            inStock: "true", 
+            inStock: "True", 
             damaged: "true" ,
             date: "2022-02-25",
             comment: "Returned by tega"
@@ -21,7 +21,7 @@ const [tableData, setTableData] = useState(
         { 
             id: 2,
             item: "Shoe", 
-            inStock: "true", 
+            inStock: "True", 
             damaged: "false" ,
             date: "2020-02-12",
             comment: "Returned by mega"
@@ -29,7 +29,7 @@ const [tableData, setTableData] = useState(
         {
             id: 3,
             item: "Shirt", 
-            inStock: "false", 
+            inStock: "False", 
             damaged: "unknown",
             date: "2023-02-18",
             comment: "Given to imate"
@@ -48,11 +48,44 @@ const addItem = (item) => {
     }
     const newItem = {id, ...item}
     setTableData([...tableData, newItem])
+    setShowAddTask(!showAddTask)
 }
 
-const ItemToEdit = (id) => {
+
+
+const saveEditedItem = (item) => {
+    setShowEditTask(!showEditTask);
+    if(item.inStock === true){
+        item.inStock = '';
+        item.inStock +='True'
+    }else if(item.inStock === false){
+        item.inStock = '';
+        item.inStock +='False'
+    }
+    setTableData([...tableData, item])
     setShowEditTask(!showEditTask)
-    const newTableData = tableData.find((item) => item.id === id)
+}
+
+const [itemEdit, setItemEdit] = useState()
+
+const ItemToEdit = (item) => {
+    setShowEditTask(!showEditTask);
+    if(item.inStock === "true"){
+        item.inStock = true
+    }else if(item.inStock === 'false'){
+        item.inStock = false
+    }else if(item.damaged === "true"){
+        item.damaged = ''
+        item.damaged += "True"
+    }else if(item.damaged === 'false'){
+        item.damaged = ''
+        item.damaged += "False"
+    }else if(item.damaged === "unknown"){
+        item.damaged = ''
+        item.damaged += "unknown"
+    }
+    console.log(item)
+    setItemEdit(item)
 }
 
 
@@ -65,7 +98,7 @@ const deleteItem = (id) => {
         <div>
             <Header onAdd={() => setShowAddTask(!showAddTask)}  showAdd={showAddTask} />            
             {showAddTask && <AddItem onAdd={addItem} />}
-            {showEditTask &&  <EditItem />}
+            {showEditTask &&  <EditItem onEditClick={itemEdit} onSaveEdit={saveEditedItem} onCancel={() => setShowEditTask(!showEditTask)}/>}
             {tableData.length > 0 ? (
                 <Tables tableData={tableData} 
                 onDelete={deleteItem} onEdit={ItemToEdit} />

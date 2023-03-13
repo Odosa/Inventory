@@ -11,7 +11,7 @@ return (
             <td>{data.date}</td>
             <td>{data.comment}</td>
             <td><MdDelete style={{color: 'red', cursor: 'pointer'}} onClick={() => onDelete(data.id)} /></td>
-            <td><AiFillEdit style={{ cursor: 'pointer'}} onClick={() => onEdit(data.id)} /></td>
+            <td><AiFillEdit style={{cursor: 'pointer'}} onClick={() => onEdit(data)} /></td>
         </tr>
     </tbody>
 );

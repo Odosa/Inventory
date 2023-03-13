@@ -12,7 +12,7 @@ const Header = ({username, rank, onAdd, showAdd}) => {
 }
 
 Header.defaultProps = {
-    username: 'User',
+    username: 'Izodosa',
     rank: 'Admin'
 }
 
