@@ -50,9 +50,12 @@ return (
         <div className="add-form">
             <form className="form" onSubmit={onSubmit}>
                 <h1>ADD ITEM</h1>
+                <br />
                 <div className="form-control">
-                    <label htmlFor="">ITEM</label>
+                    <label htmlFor="">ITEM  </label>
                     <input type="text" placeholder="Add Item" value={item} onChange={(e) => setItem(e.target.value)} />
+                </div>
+                <div className="form-control">
                     <label htmlFor="">Amount</label>
                     <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
                 </div>

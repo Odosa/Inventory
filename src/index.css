@@ -131,6 +131,21 @@ table tbody tr:last-of-type{
     border-radius: 10px;
 }
 
+form .form-control{
+    margin: auto;
+    width: 90%;
+    height: 40px;
+}
+
+form .form-control input{
+    padding: 2px 4px;
+    border-radius: 13px;
+    outline: none;
+    border: 0;
+    width: 80%;
+    height: 30px;
+}
+
 form .btn{
     background: #000;
     color: #fff;
