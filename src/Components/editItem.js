@@ -4,6 +4,7 @@ const EditItem = ({onSaveEdit, onEditClick, onCancel}) => {
     const id = onEditClick.id
     const item = onEditClick.item
     const [inStock, setInStock] = useState(onEditClick.inStock)
+    const [amount, setAmount] = useState(onEditClick.amount)
     const [damaged, setDamaged] = useState(onEditClick.damaged)
     const [date, setDate] = useState(onEditClick.date)
     const [comment, setComment] = useState(onEditClick.comment)
@@ -14,6 +15,7 @@ const EditItem = ({onSaveEdit, onEditClick, onCancel}) => {
         onSaveEdit({id, item, inStock, damaged, date, comment})
 
         setInStock(false)
+        setAmount(1)
         setDamaged("False")
         setDate('')
         setComment('')
@@ -23,6 +25,10 @@ return (
     <form className="add-form edit-form" onSubmit={onSubmit}>
         <h1>EDIT Item</h1>
         <h2>{onEditClick.item}</h2>
+        <div className="form-control">
+                <label htmlFor="">Amount</label>
+                <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
+            </div>
         <div className="form-control-check">
             <label htmlFor="">In Stock
                 <input type='checkbox' checked={inStock} onChange={(e) => setInStock(e.currentTarget.checked)}/>

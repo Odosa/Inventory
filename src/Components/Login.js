@@ -24,9 +24,10 @@ return(
     <div className="cover">
         <h1>Login Page</h1>
         <form onSubmit={handleSubmit}>
-            <input 
+            <input
                 type="text" 
                 placeholder="Username"
+                className="login-dec"
                 id='username'
                 ref={userRef}
                 autoComplete='off'
@@ -37,12 +38,13 @@ return(
             <input 
                 type="password" 
                 placeholder="Password"
+                className="login-dec"
                 id='password'
                 onChange={(e) => setPwd(e.target.value)}
                 value={pwd}
                 required
             />
-            <button className="login-btn">sign in</button>
+            <input type="submit" className="login-btn" value="sign in" />
             <p>
                 Don't have an account?<br />
                 <span className='line'>
