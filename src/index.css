@@ -41,7 +41,7 @@
 .login-btn:hover{
     transform: scale(1.25);
 }
-/*///////////Inventory.js styling////////////*/
+/*///////////Inventory.js header styling////////////*/
 
 header{
     display: flex;
@@ -109,10 +109,26 @@ table tbody tr:last-of-type{
     border-bottom: 2px solid #009879;
 }
 
-/*////////ADD ITEM.JS STYLING///////////*/
+/*////////ADD ITEM/ EDIT ITEM.JS STYLING///////////*/
 .add-form {
+    position: absolute;
+    bottom: -5;
+    left: 0;
+    right: 0;
+    background-color: white;
+    overflow: hidden;
+    width: 100%;
+    animation: Slide_Down 1s ease-out;
+}
+
+.form{
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    line-height: 30px;
+    width: 30%;
+    height: 400px;
     margin: auto;
-    margin-bottom: 30px;
+    border-radius: 10px;
 }
 
 form .btn{
@@ -128,28 +144,24 @@ form .btn{
     font-family: inherit;
 }
 
-form .btns{
-    background: #000;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: inherit;
-}
-
-form .cancelbtn{
+form .cancelBtn{
     background-color: red;
 }
 
 
+@keyframes Slide_Down{
+    0%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
 
 
 
 
+/*////////welcome page styling///////////*/
 .welcome{
     height: 692px;
     width: 100%;
