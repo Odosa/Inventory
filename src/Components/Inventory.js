@@ -50,7 +50,7 @@ const addItemClick = () => {
     }
     if(showEditItem === true){
         setShowAlert(true)
-        setMessageType('error')
+        setMessageType('warning')
         setMessage("You can't add a new item while editing another")
     }else{
         setShowAddItem(!showAddItem)
@@ -119,7 +119,7 @@ const ItemToEdit = (item) => {
         setShowEditItem(!showEditItem);
     }else{
         setShowAlert(true)
-        setMessageType('error')
+        setMessageType('warning')
         setMessage("You can't Edit this item while adding another")
     }
     
@@ -146,6 +146,9 @@ const ItemToEdit = (item) => {
 
 const deleteItem = (id) => {
     setTableData(tableData.filter((data) => data.id !== id))
+    setShowAlert(true)
+    setMessageType('success')
+    setMessage("Item Deleted Successfully")
 }
 
     return(

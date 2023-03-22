@@ -19,17 +19,17 @@ const AddItem = ({ onAdd }) => {
 
         if(!item){
             setShowAlert(true)
-            setMessageType('error')
+            setMessageType('warning')
             setMessage('Please add an Item Name')
             return
         }else if(!comment){
             setShowAlert(true)
-            setMessageType('error')
+            setMessageType('warning')
             setMessage('Please add a comment')
             return
         }else if(!date){
             setShowAlert(true)
-            setMessageType('error')
+            setMessageType('warning')
             setMessage('Please add a date')
             return
         }
@@ -46,7 +46,7 @@ const AddItem = ({ onAdd }) => {
 
 return (
     <>
-    {showAlert && <Alert type={messageType} message={message} close={() => setShowAlert(!showAlert)} />}
+        {showAlert && <Alert type={messageType} message={message} close={() => setShowAlert(!showAlert)} />}
         <form className="add-form" onSubmit={onSubmit}>        
             <div className="form-control">
                 <label htmlFor="">ITEM</label>
