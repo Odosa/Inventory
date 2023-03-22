@@ -46,7 +46,7 @@
 header{
     display: flex;
     max-width: 1400px;
-    min-width: 450px;
+    min-width: 300px;
     margin: 70px auto;
 }
 
@@ -121,29 +121,36 @@ table tbody tr:last-of-type{
     animation: Slide_Down 1s ease-out;
 }
 
+hr.solid{
+    border-top: 3px solid #bbb;
+    border-radius: 60px;
+    width: 90%;
+    margin: auto;
+}
+
 .form{
     background-color: rgba(0,0,0,0.5);
     text-align: center;
-    line-height: 30px;
     width: 30%;
-    height: 400px;
+    height: 500px;
     margin: auto;
     border-radius: 10px;
+    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
 }
 
-form .form-control{
-    margin: auto;
-    width: 90%;
-    height: 40px;
+.form-control{
+    margin: 12px 0;
 }
 
-form .form-control input{
-    padding: 2px 4px;
-    border-radius: 13px;
-    outline: none;
-    border: 0;
-    width: 80%;
-    height: 30px;
+.form-control input{
+    padding: 7px 0 7px 15px;
+    border: none;
+    border-radius: 15px;
+    width: 75%;
+}
+
+.form-control input:focus{
+    outline-color: rgb(32, 177, 225);
 }
 
 form .btn{

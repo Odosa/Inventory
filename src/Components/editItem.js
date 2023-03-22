@@ -20,11 +20,17 @@ const EditItem = ({onSaveEdit, onEditClick, onCancel}) => {
             setShowAlert(true)
             setMessageType('warning')
             setMessage('Please add a comment')
+            setTimeout(() => {
+                setShowAlert(false);
+            }, 4000);
             return
         }else if(!date){
             setShowAlert(true)
             setMessageType('warning')
             setMessage('Please add a date')
+            setTimeout(() => {
+                setShowAlert(false);
+            }, 4000);
             return
         }
 

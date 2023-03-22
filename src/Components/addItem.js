@@ -21,16 +21,25 @@ const AddItem = ({ onAdd }) => {
             setShowAlert(true)
             setMessageType('warning')
             setMessage('Please add an Item Name')
+            setTimeout(() => {
+            setShowAlert(false);
+            }, 4000);
             return
         }else if(!comment){
             setShowAlert(true)
             setMessageType('warning')
             setMessage('Please add a comment')
+            setTimeout(() => {
+            setShowAlert(false);
+            }, 4000);
             return
         }else if(!date){
             setShowAlert(true)
             setMessageType('warning')
             setMessage('Please add a date')
+            setTimeout(() => {
+            setShowAlert(false);
+            }, 4000);
             return
         }
 
@@ -50,19 +59,21 @@ return (
         <div className="add-form">
             <form className="form" onSubmit={onSubmit}>
                 <h1>ADD ITEM</h1>
-                <br />
+                <hr className="solid" />
                 <div className="form-control">
-                    <label htmlFor="">ITEM  </label>
+                    <label htmlFor=""><b>ITEM</b>   </label>
                     <input type="text" placeholder="Add Item" value={item} onChange={(e) => setItem(e.target.value)} />
                 </div>
                 <div className="form-control">
-                    <label htmlFor="">Amount</label>
+                    <label htmlFor=""><b>Amount</b> </label>
                     <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
                 </div>
-                <div className="form-control-check">
+                <div className="form-control">
                     <label htmlFor="">In Stock
                         <input type='checkbox' checked={inStock} value={inStock} onChange={(e) => setInStock(e.currentTarget.checked)}/>
                     </label>
+                </div>
+                <div className="form-control">
                     <label htmlFor="damage">Damaged:</label>
                     <select name="damage" value={damaged} onChange={(e) => setDamaged(e.target.value)}>
                         <option value="False">False</option>
@@ -70,7 +81,7 @@ return (
                         <option value="unknown">Unknown</option>
                     </select>
                 </div>
-                <div className="form-control-check">
+                <div className="form-control">
                     <input type="date" onChange={(event) => setDate(event.target.value)}/>
                 </div>
 

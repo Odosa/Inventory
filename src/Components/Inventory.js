@@ -52,6 +52,9 @@ const addItemClick = () => {
         setShowAlert(true)
         setMessageType('warning')
         setMessage("You can't add a new item while editing another")
+        setTimeout(() => {
+            setShowAlert(false);
+        }, 4000);
     }else{
         setShowAddItem(!showAddItem)
     }
@@ -74,6 +77,9 @@ const addItem = (item) => {
     setShowAlert(true)
     setMessageType("success")
     setMessage(`Successfully Added Item ${item.item}`)
+    setTimeout(() => {
+        setShowAlert(false);
+    }, 4000);
 }
 
 const cancelEdit = () => {
@@ -121,6 +127,9 @@ const ItemToEdit = (item) => {
         setShowAlert(true)
         setMessageType('warning')
         setMessage("You can't Edit this item while adding another")
+        setTimeout(() => {
+            setShowAlert(false);
+        }, 4000);
     }
     
     if(item.inStock === "true"){
@@ -149,6 +158,9 @@ const deleteItem = (id) => {
     setShowAlert(true)
     setMessageType('success')
     setMessage("Item Deleted Successfully")
+    setTimeout(() => {
+        setShowAlert(false);
+    }, 4000);
 }
 
     return(
