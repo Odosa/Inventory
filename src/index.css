@@ -278,7 +278,6 @@ form .cancelBtn:hover{
         max-width: 100%;
         display: grid;
         grid-template-columns: 100%;
-        margin: 0;
         margin-bottom: 15px;
         font-size: 0.9rem;
         z-index: 0;
@@ -293,8 +292,39 @@ form .cancelBtn:hover{
     }
 
     table{
-        width: 40%;
-        max-width: 30%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 0.8rem;
+    }
+
+    table tr{
+        margin: 0;
+        padding: 0;
+    }
+
+    table td{
+        margin: 0;
+        padding: 0;
+    }
+
+    table th{
+        margin: 0;
+        padding: 0;
+    }
+
+    table thead{
+        margin: 0;
+        padding: 0;
+    }
+
+    table tbody{
+        margin: 0;
+        padding: 0;
+    }
+
+    table .actions-in{
+        margin-left: 0;
     }
 
     .add-form {
@@ -313,7 +343,7 @@ form .cancelBtn:hover{
         opacity: 0.9;
         text-align: center;
         width: 90%;
-        height: 70%;
+        height: 500px;
         margin: 3% auto;
         border-radius: 10px;
         box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
