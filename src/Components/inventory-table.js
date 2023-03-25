@@ -20,7 +20,7 @@ return (
             <tbody>
                 {tableData.map((data) => 
                 (
-                    <TableData key={data.id} data={data} onDelete={onDelete} onEdit={onEdit}/>
+                    <TableData key={Math.random()} data={data} onDelete={onDelete} onEdit={onEdit}/>
                 )
                 )}
             </tbody>

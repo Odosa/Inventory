@@ -111,17 +111,15 @@ const saveEditedItem = (item) => {
         item.inStock +='False'
     }
 
-    // if(item){
-    //     const editTableData = tableData.find((i) => i.id === item.id)
-    //     const updatedTableData= tableData.map((t) => t.id === editTableData.id)
-    //     setTableData(updatedTableData);
-    //     setEditId(0)
-    //     return
-    // }
-
-    
-    setTableData([...tableData, item])
-    setShowEditItem(!showEditItem)
+    if(editId){
+        tableData[tableData.findIndex(data => data.id === editId)] = item;
+        setShowAlert(true)
+        setMessageType('success')
+        setMessage("Item Edited Successfully")
+        setTimeout(() => {
+            setShowAlert(false);
+        }, 4000);
+    }
 }
 
 const [itemEdit, setItemEdit] = useState()

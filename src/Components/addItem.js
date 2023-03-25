@@ -87,7 +87,7 @@ return (
                     </label>
                 </div>
                 <div className="form-control-out">
-                    <input type="date" className="form-control-date" onChange={(event) => setDate(event.target.value)}/>
+                    <input type="date" className="form-control-date" max={"<?= date('Y-m-d'); ?>"} onChange={(event) => setDate(event.target.value)}/>
                 </div>
 
                 <div className="form-control">
