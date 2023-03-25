@@ -45,17 +45,21 @@
 
 header{
     display: flex;
-    max-width: 1400px;
+    justify-content: space-between;
+    width: 92%;
     min-width: 300px;
-    margin: 70px auto;
+    margin: 3.5% auto;
 }
 
-header h3{
+.inner-header{
+    display: flex;
+}
+
+.inner-header h3{
     margin-top: 12px;
 }
 
 header .btn{
-    margin-left: auto;
     background: #000;
     color: #fff;
     border: none;
@@ -65,6 +69,7 @@ header .btn{
     text-decoration: none;
     font-size: 15px;
     font-family: inherit;
+    height: 51px;
     transition: 0.5s;
 }
 
@@ -86,12 +91,16 @@ table {
 }
 
 table thead tr{
-    background-color: #009879;
+    background-color: black;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
     height: 40px;
 }
+
+/* table thead tr th:last-of-type{
+    background-color: red;
+} */
 
 tr, td{
     padding: 12px 15px;
@@ -106,7 +115,13 @@ table tbody tr:nth-of-type(even){
 }
 
 table tbody tr:last-of-type{
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid black;
+}
+
+/*/////darkgray  a //////*/
+
+table .actions-in{
+    margin-right: 10px;
 }
 
 /*////////ADD ITEM/ EDIT ITEM.JS STYLING///////////*/
@@ -115,6 +130,7 @@ table tbody tr:last-of-type{
     bottom: -5;
     left: 0;
     right: 0;
+    height: 80%;
     background-color: white;
     overflow: hidden;
     width: 100%;
@@ -128,12 +144,16 @@ hr.solid{
     margin: auto;
 }
 
+/*///rgba(0,0,0,0.5)////*/
+
 .form{
-    background-color: rgba(0,0,0,0.5);
+    background-color: black;
+    color: white;
+    opacity: 0.9;
     text-align: center;
     width: 30%;
     height: 500px;
-    margin: auto;
+    margin: 3% auto;
     border-radius: 10px;
     box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
 }
@@ -154,8 +174,8 @@ hr.solid{
 }
 
 form .btn{
-    background: #000;
-    color: #fff;
+    background: whitesmoke;
+    color: #000;
     border: none;
     padding: 10px 20px;
     margin: 5px;

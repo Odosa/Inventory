@@ -13,8 +13,7 @@ return (
                     <th>Damaged</th>
                     <th>Date In/Out</th>
                     <th>Comment</th>
-                    <th>Delete</th>
-                    <th>Edit</th>
+                    <th>Actions</th>
                 </tr>
                 
             </thead>

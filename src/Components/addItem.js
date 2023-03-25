@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Alert from './alertBox';
 
 
@@ -11,8 +11,12 @@ const AddItem = ({ onAdd }) => {
     const [amount, setAmount] = useState(1)
     const [damaged, setDamaged] = useState('False')
     const [date, setDate] = useState('')
-    const [comment, setComment] = useState('')
-    
+    const [comment, setComment] = useState('');
+    const itemRef = useRef();
+
+    useEffect(() => {
+        itemRef.current.focus();
+    }, [])
 
     const onSubmit = (e) =>{
         e.preventDefault()
@@ -62,7 +66,7 @@ return (
                 <hr className="solid" />
                 <div className="form-control">
                     <label htmlFor=""><b>ITEM</b>   </label>
-                    <input type="text" placeholder="Add Item" value={item} onChange={(e) => setItem(e.target.value)} />
+                    <input type="text" placeholder="Add Item" ref={itemRef} value={item} onChange={(e) => setItem(e.target.value)} />
                 </div>
                 <div className="form-control">
                     <label htmlFor=""><b>Amount</b> </label>

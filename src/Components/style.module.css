@@ -1,9 +1,9 @@
 .alert {
-    position: relative;
+    position: fixed;
     width: 40%;
     padding: 1rem 1rem;
-    margin: auto;
-    margin-bottom: 1rem;
+    left: calc(32%);
+    top: 0;
     border: 1px solid transparent;
     border-radius: 0.25rem;
     text-align: center;

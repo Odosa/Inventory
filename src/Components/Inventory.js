@@ -38,6 +38,15 @@ const [tableData, setTableData] = useState(
             date: "2023-02-18",
             comment: "Given to imate"
         },
+        {
+            id: 4,
+            item: "pen",
+            amount: '3', 
+            inStock: "False", 
+            damaged: "unknown",
+            date: "2023-02-18",
+            comment: "Given to imate"
+        },
     ]
 )
 const [showAlert, setShowAlert] = useState(false)
