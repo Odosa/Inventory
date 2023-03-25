@@ -49,25 +49,28 @@ return (
         <div className="add-form">
             <form className="form" onSubmit={onSubmit}>
                 <h1>EDIT ITEM</h1>
-                <br />
-                <h2>{onEditClick.item}</h2>
+                <hr className="solid" />
+                <h2 className="edit-item">{onEditClick.item}</h2>
                 <div className="form-control">
                         <label htmlFor="">Amount</label>
                         <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
                     </div>
-                <div className="form-control">
+                <div className="form-control-out">
                     <label htmlFor="">In Stock
                         <input type='checkbox' checked={inStock} onChange={(e) => setInStock(e.currentTarget.checked)}/>
                     </label>
-                    <label htmlFor="damage">Damaged:</label>
-                    <select name="damage" value={damaged} onChange={(e) => setDamaged(e.target.value)}>
-                        <option value="False">False</option>
-                        <option value="True">True</option>
-                        <option value="unknown">Unknown</option>
-                    </select>
                 </div>
-                <div className="form-control-check">
-                    <input type="date" value={date} onChange={(event) => setDate(event.target.value)}/>
+                <div className="form-control-out">
+                    <label htmlFor="damage">Damaged:
+                        <select name="damage" value={damaged} onChange={(e) => setDamaged(e.target.value)}>
+                            <option value="False">False</option>
+                            <option value="True">True</option>
+                            <option value="unknown">Unknown</option>
+                        </select>
+                    </label>
+                </div>
+                <div className="form-control-out">
+                    <input type="date" className="form-control-date" value={date} onChange={(event) => setDate(event.target.value)}/>
                 </div>
 
                 <div className="form-control">

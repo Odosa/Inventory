@@ -7,7 +7,7 @@ return (
         <table>
             <thead>
                 <tr>
-                    <th>Item</th>
+                    <th className="item-th">Item</th>
                     <th>In Stock</th>
                     <th>Amount</th>
                     <th>Damaged</th>

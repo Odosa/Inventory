@@ -65,33 +65,34 @@ return (
                 <h1>ADD ITEM</h1>
                 <hr className="solid" />
                 <div className="form-control">
-                    <label htmlFor=""><b>ITEM</b>   </label>
-                    <input type="text" placeholder="Add Item" ref={itemRef} value={item} onChange={(e) => setItem(e.target.value)} />
+                    <label><b>ITEM</b></label>
+                    <input type="text" className="item" placeholder="Add Item" ref={itemRef} value={item} onChange={(e) => setItem(e.target.value)} />
                 </div>
                 <div className="form-control">
-                    <label htmlFor=""><b>Amount</b> </label>
+                    <label htmlFor=""><b>Amount</b></label>
                     <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
                 </div>
-                <div className="form-control">
+                <div className="form-control-out">
                     <label htmlFor="">In Stock
                         <input type='checkbox' checked={inStock} value={inStock} onChange={(e) => setInStock(e.currentTarget.checked)}/>
                     </label>
                 </div>
-                <div className="form-control">
-                    <label htmlFor="damage">Damaged:</label>
-                    <select name="damage" value={damaged} onChange={(e) => setDamaged(e.target.value)}>
-                        <option value="False">False</option>
-                        <option value="True">True</option>
-                        <option value="unknown">Unknown</option>
-                    </select>
+                <div className="form-control-out">
+                    <label htmlFor="damage">Damaged:
+                        <select name="damage" value={damaged} onChange={(e) => setDamaged(e.target.value)}>
+                            <option value="False">False</option>
+                            <option value="True">True</option>
+                            <option value="unknown">Unknown</option>
+                        </select>
+                    </label>
                 </div>
-                <div className="form-control">
-                    <input type="date" onChange={(event) => setDate(event.target.value)}/>
+                <div className="form-control-out">
+                    <input type="date" className="form-control-date" onChange={(event) => setDate(event.target.value)}/>
                 </div>
 
                 <div className="form-control">
-                    <label htmlFor="">Comment</label>
-                    <input type="text" placeholder="Returned by person's name/ given to person's name" value={comment} onChange={(e) => setComment(e.target.value)} />
+                    <label htmlFor=""><b>Comment</b></label>
+                    <input type="text" className="item" placeholder="Returned by/given to person's name" value={comment} onChange={(e) => setComment(e.target.value)} />
                 </div>
 
                 <input type="submit" value="save item" className="btn" />
