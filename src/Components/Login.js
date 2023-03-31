@@ -1,11 +1,13 @@
 import { useRef, useState, useEffect} from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
+import { useAuth } from "./PrivateRoute";
 
 const Login = ({onLogin}) => {
     const userRef = useRef();
 
     const [user, setUser] = useState('')
     const [pwd, setPwd] = useState('')
+    const auth = useAuth()
 
     useEffect(() => {
         userRef.current.focus();
@@ -14,6 +16,7 @@ const Login = ({onLogin}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        auth.login(user, pwd)
         onLogin({user, pwd})
 
         setUser('');

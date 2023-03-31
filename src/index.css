@@ -107,6 +107,11 @@ tr, td{
     padding: 12px 15px;
 }
 
+tbody tr td:first-of-type{
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
 tbody tr{
     border-bottom: 1px solid #dddddd;
     background-color: white;
