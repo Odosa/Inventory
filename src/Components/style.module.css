@@ -28,6 +28,19 @@
     border-color: #ffecb5;
     animation: Slide_Down 1s ease-out;
 }
+
+.login_warning {
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 30%;
+    left: calc(68%);
+    top: 0;
+    animation: Slide_Left 1s ease-out;
+}
+
 .primary {
     color: #084298;
     background-color: #cfe2ff;
@@ -46,7 +59,7 @@
     border-color: #b6effb;
 }
 /* The close button */
-.closebtn {
+.closeBtn {
     margin-left: 15px;
     color: white;
     font-weight: bold;
@@ -58,7 +71,7 @@
 }
 
   /* When moving the mouse over the close button */
-.closebtn:hover {
+.closeBtn:hover {
     color: black;
 }
 
@@ -68,5 +81,14 @@
     }
     100%{
         transform: translateY(0);
+    }
+}
+
+@keyframes Slide_Left{
+    0%{
+        transform: translateX(70px);
+    }
+    100%{
+        transform: translateX(0);
     }
 }

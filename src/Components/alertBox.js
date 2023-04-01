@@ -10,7 +10,7 @@ const renderElAlert = function () {
 
 return (
     <div className={css(style.alert, style[type])}>
-    <span className={style.closebtn} onClick={close}>
+    <span className={style.closeBtn} onClick={close}>
         &times;
     </span>
     {children ? renderElAlert() : message}

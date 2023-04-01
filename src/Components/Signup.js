@@ -23,35 +23,44 @@ const Signup = () => {
 
 return(
     <div className="cover">
-        <h1>Register</h1>
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text" 
-                placeholder="Username"
-                className="login-dec"
-                id='username'
-                ref={userRef}
-                autoComplete='off'
-                onChange={(e) => setUser(e.target.value)}
-                value={user}
-                required
-            />
-            <input 
-                type="password" 
-                placeholder="Password"
-                className="login-dec"
-                id='password'
-                onChange={(e) => setPwd(e.target.value)}
-                value={pwd}
-                required
-            />
+        <form onSubmit={handleSubmit} className="login_form">
+            <h1>Register</h1>
+            <div className="form-control">
+                <label>Username: </label>
+                <input
+                    type="text" 
+                    placeholder="Username"
+                    className="login-dec"
+                    id='username'
+                    ref={userRef}
+                    onChange={(e) => setUser(e.target.value)}
+                    value={user}
+                    required
+                />
+            </div>
+            <div className="form-control">
+                <label>Password: </label>
+                <input 
+                    type="password" 
+                    placeholder="Password"
+                    className="login-dec"
+                    id='password'
+                    onChange={(e) => setPwd(e.target.value)}
+                    value={pwd}
+                    required
+                />
+            </div>
+
             <input type="submit" className="login-btn" value="sign in" />
-            <p>
-                Already have an account?<br />
-                <span className='line'>
-                    <NavLink to='/Login'>Login</NavLink>
-                </span>
-            </p>
+
+            <div className="login_form_end">
+                <p>
+                    Already have an account?
+                    <span className='line'>
+                        <NavLink to='/Login'>Login</NavLink>
+                    </span>
+                </p>
+            </div>
         </form>
     </div>
 )}

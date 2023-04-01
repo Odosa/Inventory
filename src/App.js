@@ -1,14 +1,19 @@
 import { Routes, Route, Outlet } from 'react-router';
 import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import Button from './Components/Buttons';
 import Usage from './Components/usage';
 import RequirePR from "./Components/RequirePR";
-import Inventory from "./Components/Inventory"
+import Inventory from "./Components/Inventory";
+import Alert from './Components/alertBox';
 import { AuthProvider } from './Components/PrivateRoute';
 
 const App = () => {
+  const [showAlert, setShowAlert] = useState(false)
+  const [message, setMessage] = useState("")
+  const [messageType, setMessageType] = useState("")
   const navigate = useNavigate()
   const userInfoDefault =
   {
@@ -18,7 +23,12 @@ const App = () => {
 
   const logUser = (userinfo) => {
     if(userinfo.user !== userInfoDefault.user || userinfo.pwd !== userInfoDefault.pwd){
-      alert('Invalid Username or Password')
+      setShowAlert(true)
+        setMessageType('login_warning')
+        setMessage("Invalid Username or Password")
+        setTimeout(() => {
+            setShowAlert(false);
+        }, 4000);
       return
     }
     navigate('/Inventory')
@@ -26,6 +36,7 @@ const App = () => {
 
   return (
     <AuthProvider>
+      {showAlert && <Alert type={messageType} message={message} close={() => setShowAlert(!showAlert)} />}
       <Routes>
         <Route path='/' element={<div className="welcome"><h1>Welcome to INVENTORY</h1><div className="break"></div><Button/></div>}></Route>
         <Route path='/Login' element={<div><Login onLogin={logUser} /><Outlet/></div>}></Route>

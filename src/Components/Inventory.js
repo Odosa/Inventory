@@ -7,156 +7,156 @@ import EditItem from './editItem';
 import Alert from './alertBox';
 
 const Inventory = () => {
-    const auth = useAuth()
+const auth = useAuth()
 const [showAddItem, setShowAddItem] = useState(false)
 const [showEditItem, setShowEditItem] = useState(false)
 const [editId, setEditId] = useState()
 const [tableData, setTableData] = useState(
     [
-        {
-            id: 1,
-            item: "Hat", 
-            amount: '1',
-            inStock: "True", 
-            damaged: "true" ,
-            date: "2022-02-25",
-            comment: "Returned by tega"
-        },
-        { 
-            id: 2,
-            item: "Shoe",
-            amount: '1',
-            inStock: "True", 
-            damaged: "false" ,
-            date: "2020-02-12",
-            comment: "Returned by mega"
-        },
-        {
-            id: 3,
-            item: "Shirt",
-            amount: '1', 
-            inStock: "False", 
-            damaged: "unknown",
-            date: "2023-02-18",
-            comment: "Given to imate"
-        },
-        {
-            id: 4,
-            item: "pen",
-            amount: '3', 
-            inStock: "False", 
-            damaged: "unknown",
-            date: "2023-02-18",
-            comment: "Given to imate"
-        },
-        {
-            id: 5,
-            item: "Hat", 
-            amount: '1',
-            inStock: "True", 
-            damaged: "true" ,
-            date: "2022-02-25",
-            comment: "Returned by tega"
-        },
-        { 
-            id: 6,
-            item: "Shoe",
-            amount: '1',
-            inStock: "True", 
-            damaged: "false" ,
-            date: "2020-02-12",
-            comment: "Returned by mega"
-        },
-        {
-            id: 7,
-            item: "Shirt",
-            amount: '1', 
-            inStock: "False", 
-            damaged: "unknown",
-            date: "2023-02-18",
-            comment: "Given to imate"
-        },
-        {
-            id: 8,
-            item: "pen",
-            amount: '3', 
-            inStock: "False", 
-            damaged: "unknown",
-            date: "2023-02-18",
-            comment: "Given to imate"
-        },
-        {
-            id: 9,
-            item: "Hat", 
-            amount: '1',
-            inStock: "True", 
-            damaged: "true" ,
-            date: "2022-02-25",
-            comment: "Returned by tega"
-        },
-        { 
-            id: 10,
-            item: "Shoe",
-            amount: '1',
-            inStock: "True", 
-            damaged: "false" ,
-            date: "2020-02-12",
-            comment: "Returned by mega"
-        },
-        {
-            id: 11,
-            item: "Shirt",
-            amount: '1', 
-            inStock: "False", 
-            damaged: "unknown",
-            date: "2023-02-18",
-            comment: "Given to imate"
-        },
-        {
-            id: 12,
-            item: "pen",
-            amount: '3', 
-            inStock: "False", 
-            damaged: "unknown",
-            date: "2023-02-18",
-            comment: "Given to imate"
-        },
-        {
-            id: 13,
-            item: "Hat", 
-            amount: '1',
-            inStock: "True", 
-            damaged: "true" ,
-            date: "2022-02-25",
-            comment: "Returned by tega"
-        },
-        { 
-            id: 14,
-            item: "Shoe",
-            amount: '1',
-            inStock: "True", 
-            damaged: "false" ,
-            date: "2020-02-12",
-            comment: "Returned by mega"
-        },
-        {
-            id: 15,
-            item: "Shirt",
-            amount: '1', 
-            inStock: "False", 
-            damaged: "unknown",
-            date: "2023-02-18",
-            comment: "Given to imate"
-        },
-        {
-            id: 16,
-            item: "pen",
-            amount: '3', 
-            inStock: "False", 
-            damaged: "unknown",
-            date: "2023-02-18",
-            comment: "Given to imate"
-        },
+        // {
+        //     id: 1,
+        //     item: "Hat", 
+        //     amount: '1',
+        //     inStock: "True", 
+        //     damaged: "true" ,
+        //     date: "2022-02-25",
+        //     comment: "Returned by tega"
+        // },
+        // { 
+        //     id: 2,
+        //     item: "Shoe",
+        //     amount: '1',
+        //     inStock: "True", 
+        //     damaged: "false" ,
+        //     date: "2020-02-12",
+        //     comment: "Returned by mega"
+        // },
+        // {
+        //     id: 3,
+        //     item: "Shirt",
+        //     amount: '1', 
+        //     inStock: "False", 
+        //     damaged: "unknown",
+        //     date: "2023-02-18",
+        //     comment: "Given to imate"
+        // },
+        // {
+        //     id: 4,
+        //     item: "pen",
+        //     amount: '3', 
+        //     inStock: "False", 
+        //     damaged: "unknown",
+        //     date: "2023-02-18",
+        //     comment: "Given to imate"
+        // },
+        // {
+        //     id: 5,
+        //     item: "Hat", 
+        //     amount: '1',
+        //     inStock: "True", 
+        //     damaged: "true" ,
+        //     date: "2022-02-25",
+        //     comment: "Returned by tega"
+        // },
+        // { 
+        //     id: 6,
+        //     item: "Shoe",
+        //     amount: '1',
+        //     inStock: "True", 
+        //     damaged: "false" ,
+        //     date: "2020-02-12",
+        //     comment: "Returned by mega"
+        // },
+        // {
+        //     id: 7,
+        //     item: "Shirt",
+        //     amount: '1', 
+        //     inStock: "False", 
+        //     damaged: "unknown",
+        //     date: "2023-02-18",
+        //     comment: "Given to imate"
+        // },
+        // {
+        //     id: 8,
+        //     item: "pen",
+        //     amount: '3', 
+        //     inStock: "False", 
+        //     damaged: "unknown",
+        //     date: "2023-02-18",
+        //     comment: "Given to imate"
+        // },
+        // {
+        //     id: 9,
+        //     item: "Hat", 
+        //     amount: '1',
+        //     inStock: "True", 
+        //     damaged: "true" ,
+        //     date: "2022-02-25",
+        //     comment: "Returned by tega"
+        // },
+        // { 
+        //     id: 10,
+        //     item: "Shoe",
+        //     amount: '1',
+        //     inStock: "True", 
+        //     damaged: "false" ,
+        //     date: "2020-02-12",
+        //     comment: "Returned by mega"
+        // },
+        // {
+        //     id: 11,
+        //     item: "Shirt",
+        //     amount: '1', 
+        //     inStock: "False", 
+        //     damaged: "unknown",
+        //     date: "2023-02-18",
+        //     comment: "Given to imate"
+        // },
+        // {
+        //     id: 12,
+        //     item: "pen",
+        //     amount: '3', 
+        //     inStock: "False", 
+        //     damaged: "unknown",
+        //     date: "2023-02-18",
+        //     comment: "Given to imate"
+        // },
+        // {
+        //     id: 13,
+        //     item: "Hat", 
+        //     amount: '1',
+        //     inStock: "True", 
+        //     damaged: "true" ,
+        //     date: "2022-02-25",
+        //     comment: "Returned by tega"
+        // },
+        // { 
+        //     id: 14,
+        //     item: "Shoe",
+        //     amount: '1',
+        //     inStock: "True", 
+        //     damaged: "false" ,
+        //     date: "2020-02-12",
+        //     comment: "Returned by mega"
+        // },
+        // {
+        //     id: 15,
+        //     item: "Shirt",
+        //     amount: '1', 
+        //     inStock: "False", 
+        //     damaged: "unknown",
+        //     date: "2023-02-18",
+        //     comment: "Given to imate"
+        // },
+        // {
+        //     id: 16,
+        //     item: "pen",
+        //     amount: '3', 
+        //     inStock: "False", 
+        //     damaged: "unknown",
+        //     date: "2023-02-18",
+        //     comment: "Given to imate"
+        // },
     ]
 )
 const [showAlert, setShowAlert] = useState(false)
@@ -216,7 +216,7 @@ const saveEditedItem = (item) => {
 
     if(item.amount === 0){
         if(!item.inStock === false){
-            console.log('false')
+            console.log(false)
         }
     }
 
@@ -232,7 +232,7 @@ const saveEditedItem = (item) => {
         tableData[tableData.findIndex(data => data.id === editId)] = item;
         setShowAlert(true)
         setMessageType('success')
-        setMessage("Item Edited Successfully")
+        setMessage(`Item ${item.item} Updated Successfully`)
         setTimeout(() => {
             setShowAlert(false);
         }, 4000);
