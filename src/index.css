@@ -13,13 +13,12 @@
     align-items: center;
     margin: auto;
     margin-top: 120px;
-    background-color: white;
     width: 35em;
     border-radius: 1em;
     box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
     height: 450px;
-    background-color: black;
-    color: white;
+    background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8));
+    color: pink;
 }
 
 .login_form{
@@ -27,7 +26,6 @@
     text-align: center;
     width: 90%;
     margin: 3% auto;
-    border-radius: 10px;
 }
 
 .login_form h1{
@@ -44,7 +42,7 @@
 .cover .login-dec{
     border: none;
     background-color: rgb(229, 226, 226);
-    border-radius: 0.25em;
+    border-radius: 7px;
     text-align: center;
     padding: 0.7em;
     width: 80%;
@@ -56,11 +54,11 @@
 }
 
 .cover input:focus{
-    outline: 1px solid black;
+    outline: 1.6px solid #C04848;
 }
 
 .login-btn{
-    background-color: black;
+    background-color: rgb(72,0,72,0.4);
     color: white;
     border: 2px solid #bbb;
     padding: 10px 20px;
@@ -78,8 +76,8 @@
 .login-btn:hover{
     transform: scale(1.1);
     background-color: white;
-    color: black;
-    border: 1px solid black;
+    color: #C04848;
+    border: 2px solid #C04848;
 }
 
 .login_form_end{
@@ -87,7 +85,12 @@
 }
 
 .login_form a{
+    margin-left: 2px;
     color: white;
+}
+
+.login_form a:hover{
+    color: black;
 }
 
 /*///////////Inventory.js header styling////////////*/
@@ -197,7 +200,7 @@ table .actions-in{
 }
 
 .form hr.solid{
-    border-top: 3px solid #bbb;
+    border: 2.4px solid rgb(72,0,72,0.2);
     border-radius: 60px;
     width: 90%;
     margin: auto;
@@ -206,7 +209,7 @@ table .actions-in{
 /*///rgba(0,0,0,0.5)////*/
 
 .form{
-    background-color: black;
+    background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8));
     color: white;
     opacity: 0.9;
     text-align: center;
@@ -215,6 +218,10 @@ table .actions-in{
     margin: 3% auto;
     border-radius: 10px;
     box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+}
+
+.form h1{
+    padding-top: 20px;
 }
 
 .form-control{
@@ -236,7 +243,7 @@ table .actions-in{
 }
 
 .form .form-control input:focus{
-    outline-color: #bbb;
+    outline: 1.6px solid #C04848;
 }
 
 .form .form-control-out{
@@ -250,7 +257,7 @@ table .actions-in{
 }
 
 .form .btn{
-    background-color: black;
+    background: rgb(72,0,72,0.4);
     color: white;
     border: 2px solid #bbb;
     padding: 10px 20px;
@@ -266,12 +273,13 @@ table .actions-in{
 .form .btn:hover{
     transform: scale(1.1);
     background-color: white;
-    color: black;
+    color: #C04848;
+    border: 2px solid #C04848;
 }
 
 .form .cancelBtn{
     margin-left: 20px;
-    background-color: red;
+    background-color: rgb(255,0,0,0.5);
 }
 
 .form .cancelBtn:hover{
@@ -297,7 +305,7 @@ table .actions-in{
     width: 100%;
     text-align: center;
     padding-top: 100px;
-    color: white;
+    color: pink;
     overflow: hidden;
     background: #C04848;  /* fallback for old browsers */
     background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8)), url("../public/landingpage.png");  /* Chrome 10-25, Safari 5.1-6 */
@@ -311,8 +319,8 @@ table .actions-in{
 }
 
 .welcome button{
-    background: #000;
-    color: #fff;
+    background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8));
+    color: pink;
     border: none;
     padding: 10px 20px;
     margin: 5px;

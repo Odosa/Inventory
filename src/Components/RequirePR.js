@@ -1,12 +1,11 @@
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { useAuth } from "./PrivateRoute";
 
 const RequirePR = ({children}) => {
     const auth =  useAuth()
-    const navigate = useNavigate()
 
     if(!auth.user) {
-        navigate('/Login')
+        return <Navigate to='/login' />
     }
 
     return children;
