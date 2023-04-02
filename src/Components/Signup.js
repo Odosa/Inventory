@@ -51,7 +51,7 @@ return(
                 />
             </div>
 
-            <input type="submit" className="login-btn" value="sign in" />
+            <input type="submit" className="login-btn" value="sign up" />
 
             <div className="login_form_end">
                 <p>

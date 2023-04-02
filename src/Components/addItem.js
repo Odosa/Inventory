@@ -92,7 +92,7 @@ return (
 
                 <div className="form-control">
                     <label htmlFor=""><b>Comment</b></label>
-                    <input type="text" className="item" placeholder="Returned by/given to person's name" value={comment} onChange={(e) => setComment(e.target.value)} />
+                    <input type="text" className="item" placeholder="Returned by/ Given to person's name" value={comment} onChange={(e) => setComment(e.target.value)} />
                 </div>
 
                 <input type="submit" value="save item" className="btn" />
