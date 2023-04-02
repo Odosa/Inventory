@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useAuth } from './PrivateRoute'
 import Header from "./inventory-header";
 import Tables from './inventory-table';
@@ -162,6 +162,19 @@ const [tableData, setTableData] = useState(
 const [showAlert, setShowAlert] = useState(false)
 const [message, setMessage] = useState("")
 const [messageType, setMessageType] = useState("")
+
+
+useEffect(() => {
+    if (true) {
+        setShowAlert(true)
+        setMessageType('success')
+        setMessage(`Welcome ${auth.user}`)
+        setTimeout(() => {
+            setShowAlert(false);
+        }, 4000);
+    }
+}, [auth.user]);
+
 
 const addItemClick = () => {
     if(showAlert === true){
