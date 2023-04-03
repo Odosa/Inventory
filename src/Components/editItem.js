@@ -6,10 +6,10 @@ const EditItem = ({onSaveEdit, onEditClick, onCancel}) => {
     const [message, setMessage] = useState("")
     const [messageType, setMessageType] = useState("")
     const id = onEditClick.id
-    const item = onEditClick.item
-    const [inStock, setInStock] = useState(onEditClick.inStock)
-    const [amount, setAmount] = useState(onEditClick.amount)
-    const [damaged, setDamaged] = useState(onEditClick.damaged)
+    const name = onEditClick.name
+    const [stockStatus, setStockStatus] = useState(onEditClick.stockStatus)
+    const [quantity, setQuantity] = useState(onEditClick.quantity)
+    const [status, setStatus] = useState(onEditClick.status)
     const [date, setDate] = useState(onEditClick.date)
     const [comment, setComment] = useState(onEditClick.comment)
 
@@ -34,13 +34,18 @@ const EditItem = ({onSaveEdit, onEditClick, onCancel}) => {
             return
         }
 
-        onSaveEdit({id, item, amount, inStock, damaged, date, comment})
+        onSaveEdit({id, name, quantity, stockStatus, status, date, comment})
 
-        setInStock(false)
-        setAmount(1)
-        setDamaged("False")
+        setStockStatus("Arrived")
+        setQuantity(1)
+        setStatus("Arrived")
         setDate('')
         setComment('')
+    }
+
+    const onChange = (e) => {
+        setStatus(e.target.value)
+        setStockStatus(e.target.value)
     }
 
 return (
@@ -50,22 +55,18 @@ return (
             <form className="form" onSubmit={onSubmit}>
                 <h1>EDIT ITEM</h1>
                 <hr className="solid" />
-                <h2 className="edit-item">{onEditClick.item}</h2>
+                <h2 className="edit-name">{onEditClick.name}</h2>
                 <div className="form-control">
-                        <label htmlFor="">Amount</label>
-                        <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
+                        <label htmlFor="">Quantity</label>
+                        <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
                     </div>
+
                 <div className="form-control-out">
-                    <label htmlFor="">In Stock
-                        <input type='checkbox' checked={inStock} onChange={(e) => setInStock(e.currentTarget.checked)}/>
-                    </label>
-                </div>
-                <div className="form-control-out">
-                    <label htmlFor="damage">Damaged:
-                        <select name="damage" value={damaged} onChange={(e) => setDamaged(e.target.value)}>
-                            <option value="False">False</option>
-                            <option value="True">True</option>
-                            <option value="unknown">Unknown</option>
+                    <label htmlFor="status">Status:
+                        <select name="status" value={status} onChange={onChange}>
+                            <option value="Arrived">Arrived</option>
+                            <option value="Ordered">Ordered</option>
+                            <option value="Shipping">Shipping</option>
                         </select>
                     </label>
                 </div>

@@ -1,15 +1,14 @@
 import { useRef, useState, useEffect } from 'react';
 import Alert from './alertBox';
 
-
 const AddItem = ({ onAdd }) => {
     const [showAlert, setShowAlert] = useState(true)
     const [message, setMessage] = useState("")
     const [messageType, setMessageType] = useState("")
-    const [item, setItem] = useState('')
-    const [inStock, setInStock] = useState(true)
-    const [amount, setAmount] = useState(1)
-    const [damaged, setDamaged] = useState('False')
+    const [name, setName] = useState('')
+    const [stockStatus, setStockStatus] = useState("Arrived")
+    const [quantity, setQuantity] = useState(1)
+    const [status, setStatus] = useState('Arrived')
     const [date, setDate] = useState('')
     const [comment, setComment] = useState('');
     const itemRef = useRef();
@@ -21,7 +20,7 @@ const AddItem = ({ onAdd }) => {
     const onSubmit = (e) =>{
         e.preventDefault()
 
-        if(!item){
+        if(!name){
             setShowAlert(true)
             setMessageType('warning')
             setMessage('Please add an Item Name')
@@ -47,14 +46,19 @@ const AddItem = ({ onAdd }) => {
             return
         }
 
-        onAdd({item, inStock, amount, damaged, date, comment})
+        onAdd({name, stockStatus, quantity, status, date, comment})
 
-        setItem('')
-        setInStock(false)
-        setAmount(1)
-        setDamaged("False")
+        setName('')
+        setStockStatus("Arrived")
+        setQuantity(1)
+        setStatus("Arrived")
         setDate('')
         setComment('')
+    }
+
+    const onChange = (e) => {
+        setStatus(e.target.value)
+        setStockStatus(e.target.value)
     }
 
 return (
@@ -65,24 +69,20 @@ return (
                 <h1>ADD ITEM</h1>
                 <hr className="solid" />
                 <div className="form-control">
-                    <label><b>ITEM</b></label>
-                    <input type="text" className="item" placeholder="Add Item" ref={itemRef} value={item} onChange={(e) => setItem(e.target.value)} />
+                    <label><b>NAME</b></label>
+                    <input type="text" className="name" placeholder="Add name" ref={itemRef} value={name} onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div className="form-control">
-                    <label htmlFor=""><b>Amount</b></label>
-                    <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
+                    <label htmlFor=""><b>Quantity</b></label>
+                    <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
                 </div>
+
                 <div className="form-control-out">
-                    <label htmlFor="">In Stock
-                        <input type='checkbox' checked={inStock} value={inStock} onChange={(e) => setInStock(e.currentTarget.checked)}/>
-                    </label>
-                </div>
-                <div className="form-control-out">
-                    <label htmlFor="damage">Damaged:
-                        <select name="damage" value={damaged} onChange={(e) => setDamaged(e.target.value)}>
-                            <option value="False">False</option>
-                            <option value="True">True</option>
-                            <option value="unknown">Unknown</option>
+                    <label htmlFor="status">Status:
+                        <select name="status" value={status} onChange={onChange}>
+                            <option value="Arrived">Arrived</option>
+                            <option value="Ordered">Ordered</option>
+                            <option value="Shipping">Shipping</option>
                         </select>
                     </label>
                 </div>
@@ -92,7 +92,7 @@ return (
 
                 <div className="form-control">
                     <label htmlFor=""><b>Comment</b></label>
-                    <input type="text" className="item" placeholder="Returned by/ Given to person's name" value={comment} onChange={(e) => setComment(e.target.value)} />
+                    <input type="text" className="name" placeholder="Returned by/ Given to person's name" value={comment} onChange={(e) => setComment(e.target.value)} />
                 </div>
 
                 <input type="submit" value="save item" className="btn" />

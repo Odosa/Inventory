@@ -7,11 +7,11 @@ return (
         <table>
             <thead>
                 <tr>
-                    <th className="item-th">Item</th>
+                    <th className="name-th">Name</th>
+                    <th>Quantity</th>
+                    <th className="status-th">Status</th>
                     <th>In Stock</th>
-                    <th>Amount</th>
-                    <th>Damaged</th>
-                    <th>Date In/Out</th>
+                    <th>Date</th>
                     <th>Comment</th>
                     <th>Actions</th>
                 </tr>

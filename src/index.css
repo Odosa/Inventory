@@ -124,40 +124,106 @@ header .btn{
     transition: 0.5s;
 }
 
-h1{
+header h1{
     text-align: center;
+    text-transform: capitalize;
 }
 
 header .btn:hover{
     transform: scale(1.05);
 }
 
+.searchbar-cover{
+    width: 95%;
+    margin: auto;
+}
+
+.searchbar{
+    width: 99%;
+    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+}
+
 /*////Table styling//////*/
 table {
     border-collapse: collapse;
     margin: auto;
+    margin-top: 30px;
     font-size: 0.9em;
     width: 95%;
 }
 
 table thead tr{
-    background-color: black;
-    color: #ffffff;
+    background-color: #f3f3f3;
+    color: black;
     text-align: left;
     font-weight: bold;
-    height: 40px;
+    height: 50px;
+    border-bottom: 1px solid #c3c3c3;
+    border-top: 1px solid #c3c3c3;
 }
 
-.item-th{
+table th:first-of-type, table td:first-of-type{
+    border-left: 1px solid #dddddd;
+}
+
+table th:last-of-type, table td:last-of-type{
+    border-right: 1px solid #dddddd;
+}
+
+span.divider{
+    display: inline-block;
+    width: 0;
+    height: 1em;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.name-th{
     padding-left: 10px;
 }
+
+/* .SS-th, table tbody tr td:nth-of-type(4){
+    width: 50px;
+    background-color: pink;
+} */
+
+/* .arrived{
+    color: green;
+    margin-left: 111px;
+}
+
+.shipping{
+    margin-left: 100px;
+}
+
+.ordered{
+    margin-left: 103px;
+}
+
+.lowStock{
+    color: orange;
+}
+
+.noStock{
+    color: red;
+    margin-left: 67px;
+} */
 
 /* table thead tr th:last-of-type{
     background-color: red;
 } */
 
+table th{
+    padding-left: 9px;
+}
+
 tr, td{
-    padding: 12px 15px;
+    padding: 12px 10px;
+    padding-bottom: 45px;
+}
+
+tr, td:first-of-type{
+    padding-left: 10px;
 }
 
 tbody tr td:first-of-type{
@@ -189,10 +255,10 @@ table .actions-in{
 /*////////ADD ITEM/ EDIT ITEM.JS STYLING///////////*/
 .add-form {
     position: absolute;
-    bottom: -5;
+    bottom: 0;
     left: 0;
     right: 0;
-    height: 80%;
+    height: 85%;
     background-color: white;
     overflow: hidden;
     width: 100%;
@@ -231,7 +297,7 @@ table .actions-in{
     justify-content: space-between;
 }
 
-.form .edit-item{
+.form .edit-name{
     margin-top: 15px;
 }
 
@@ -254,6 +320,8 @@ table .actions-in{
     padding: 7px 0 7px 15px;
     border-radius: 20px;
     border: none;
+    color: #C04848;
+    outline: 1.6px solid #C04848;
 }
 
 .form .btn{
@@ -421,4 +489,16 @@ table .actions-in{
         font-size: 0.8rem;
     }
 }
+
+.arrived{
+    color: green;
+}
+.lowStock{
+    color: orange;
+}
+
+.noStock{
+    color: red;
+}
+
 
