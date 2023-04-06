@@ -16,13 +16,14 @@ const Navbar = () => {
                 </NavLink>
             </div>
             <div className="nav-right">
-                <NavLink to='/login'>
-                            Login
-                        </NavLink>
                 {
-                    auth.user && (
+                    auth.user !== null ? (
                         <NavLink to='/profile'>
                             Profile
+                        </NavLink>
+                    ):(
+                        <NavLink to='/login'>
+                            Login
                         </NavLink>
                     )
                 }

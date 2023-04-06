@@ -87,6 +87,13 @@ const addItem = async (item) => {
         }else if(item.quantity < 5){
             item.stockStatus = "";
             item.stockStatus +="lowStock"
+            item.status = ""
+            item.status += "Available"
+        }else{
+            item.stockStatus = "";
+            item.stockStatus +="Arrived"
+            item.status = ""
+            item.status += "Available"
         }
     }
 
@@ -134,6 +141,13 @@ const saveEditedItem = async (item) => {
     }else if(item.quantity < 5){
         item.stockStatus = "";
         item.stockStatus +="lowStock"
+        item.status = ""
+        item.status += "Available"
+    }else{
+        item.stockStatus = ""
+        item.stockStatus += "Arrived"
+        item.status = ""
+        item.status += "Available"
     }
 
     const updateTableData = {...item}
