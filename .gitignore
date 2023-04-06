@@ -10,7 +10,9 @@
 
 # production
 /build
-.db.json
+
+.env
+db.json
 
 # misc
 .DS_Store
