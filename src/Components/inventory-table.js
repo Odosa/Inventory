@@ -3,7 +3,7 @@ import TableData from "./inventory-data";
 const Tables = ({tableData, onDelete, onEdit}) => {
 
 return (
-    <div>
+    <div className="table">
         <table>
             <thead>
                 <tr>
@@ -18,9 +18,9 @@ return (
                 
             </thead>
             <tbody>
-                {tableData.map((data) => 
+                {tableData.map((data, index) => 
                 (
-                    <TableData key={Math.random()} data={data} onDelete={onDelete} onEdit={onEdit}/>
+                    <TableData key={index} data={data} onDelete={onDelete} onEdit={onEdit}/>
                 )
                 )}
             </tbody>

@@ -5,7 +5,7 @@ const RequirePR = ({children}) => {
     const auth =  useAuth()
 
     if(!auth.user) {
-        return <Navigate to='/login' />
+        return <Navigate to='/Login' />
     }
 
     return children;

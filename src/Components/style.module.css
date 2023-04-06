@@ -1,5 +1,7 @@
 .alert {
+    display: none;
     position: fixed;
+    z-index: 10;
     width: 40%;
     padding: 1rem 1rem;
     left: calc(32%);
@@ -9,27 +11,34 @@
     text-align: center;
 }
 .error {
+    display: inline;
+    margin-top: 75px;
     color: #842029;
     background-color: #f8d7da;
     border-color: #f5c2c7;
-    animation: Slide_Down 1s ease-out;
+    animation: Slide_Down 1.5s ease-out;
 }
 
 .success {
+    display: inline;
+    margin-top: 75px;
     color: #0f5132;
     background-color: #d1e7dd;
     border-color: #badbcc;
-    animation: Slide_Down 1s ease-in;
+    animation: Slide_Down 1.5s ease-in;
 }
 
 .warning {
+    display: inline;
+    margin-top: 75px;
     color: #664d03;
     background-color: #fff3cd;
     border-color: #ffecb5;
-    animation: Slide_Down 1s ease-out;
+    animation: Slide_Down 1.5s ease-out;
 }
 
 .login_warning {
+    display: inline;
     color: #664d03;
     background-color: #fff3cd;
     border-color: #ffecb5;
@@ -42,23 +51,26 @@
 }
 
 .primary {
+    display: inline;
     color: #084298;
     background-color: #cfe2ff;
     border-color: #b6d4fe;
 }
 
 .secondary {
+    display: inline;
     color: #41464b;
     background-color: #e2e3e5;
     border-color: #d3d6d8;
 }
 
 .info {
+    display: inline;
     color: #055160;
     background-color: #cff4fc;
     border-color: #b6effb;
 }
-/* The close button */
+
 .closeBtn {
     margin-left: 15px;
     color: white;
@@ -75,9 +87,16 @@
     color: black;
 }
 
+.addItemOpen{
+    color: pink;
+}
+.addItemOpen{
+    color: black;
+}
+
 @keyframes Slide_Down{
     0%{
-        transform: translateY(-50px);
+        transform: translateY(-80px);
     }
     100%{
         transform: translateY(0);

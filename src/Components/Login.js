@@ -1,3 +1,4 @@
+import "./welcome.css"
 import { useRef, useState, useEffect} from 'react'
 import { NavLink} from 'react-router-dom';
 import { useAuth } from "./PrivateRoute";
@@ -55,7 +56,7 @@ return(
             
             <input type="submit" className="login-btn" value="sign in" />
 
-            <div className="login_form_end">
+            <div className="form-end">
                 <p>
                     Don't have an account?
                     <span className='line'>

@@ -53,7 +53,7 @@ return(
 
             <input type="submit" className="login-btn" value="sign up" />
 
-            <div className="login_form_end">
+            <div className="form-end">
                 <p>
                     Already have an account?
                     <span className='line'>
