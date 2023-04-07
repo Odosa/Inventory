@@ -76,8 +76,8 @@ const addItem = async (item) => {
 
     setShowAlert(false)
     
-    if(item.stockStatus === "Shipping" || item.stockStatus === "Ordered"){
-        return
+    if(item.status === "Shipping" || item.status === "Ordered"){
+        
     }else{
         if(item.quantity < 1){
             item.stockStatus = ""
@@ -132,22 +132,25 @@ const saveEditedItem = async (item) => {
     if(showAlert === true){
         setShowAlert(false)
     }
-
-    if(item.quantity < 1){
-        item.stockStatus = ""
-        item.stockStatus += "noStock"
-        item.status = ""
-        item.status += "Not available"
-    }else if(item.quantity < 5){
-        item.stockStatus = "";
-        item.stockStatus +="lowStock"
-        item.status = ""
-        item.status += "Available"
-    }else{
-        item.stockStatus = ""
-        item.stockStatus += "Arrived"
-        item.status = ""
-        item.status += "Available"
+    if(item.status === "Shipping" || item.status === "Ordered"){
+        
+    }else {
+        if(item.quantity < 1){
+            item.stockStatus = ""
+            item.stockStatus += "noStock"
+            item.status = ""
+            item.status += "Not available"
+        }else if(item.quantity < 5){
+            item.stockStatus = "";
+            item.stockStatus +="lowStock"
+            item.status = ""
+            item.status += "Available"
+        }else{
+            item.stockStatus = ""
+            item.stockStatus += "Arrived"
+            item.status = ""
+            item.status += "Available"
+        }
     }
 
     const updateTableData = {...item}

@@ -1,0 +1,590 @@
+body{
+    background: no-repeat right fixed;
+    background-image: linear-gradient(90deg, rgb(220, 220, 220), rgb(220, 220, 220, 0.5) 49%, rgb(220, 220, 220, 0.5)), url("./bg2.jpg");
+    background-size: contain;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(7, 28, 59, 0.87);
+    width: 100%;
+    height: 70px;
+}
+
+nav img{
+    width: 40px;
+    height: 40px;
+}
+
+nav .brand{
+    display: flex;
+    width: 15%;
+    float: left;
+    align-items: center;
+    margin-left: 8%;
+    height: 100%;
+}
+
+nav .nav-right{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    float: right;
+    margin-top: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+/*////////welcome page styling///////////*/
+.welcome{
+    width: 40%;
+    font-size: x-large;
+    text-align: center;
+    /* color: pink; */
+    color: black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.welcome button{
+    background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8));
+    color: pink;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+/*////////////Login.js styling/////////////*/
+
+.cover{
+    display: flex;
+    width: 100%;
+}
+
+.login_form{
+    /* background: linear-gradient(90deg, rgb(116, 57, 219), rgb(198, 111, 188, 0.7) 48%, rgb(247, 148, 77, 0.5)); */
+    width: 35%;
+    border-radius: 1em;
+    border: 2px solid #bbb;
+    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+    color: black;
+    text-align: center;
+    margin: 7% 100px;
+    /* margin: 7% auto; */
+}
+
+.login_form h1{
+    margin: 50px auto;
+}
+
+.login_form .form-control{
+    display: flex;
+    margin: 30px auto;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.login-dec{
+    border: none;
+    background-color: #dcdcdc;
+    border-radius: 7px;
+    text-align: center;
+    padding: 0.7em;
+    width: 80%;
+    margin: auto;
+}
+
+.login_form label{
+    margin-right: 10px;
+}
+
+.login_form .login-dec:focus{
+    outline: 1.6px solid rgb(213, 85, 84, 0.7);
+}
+
+.login-btn{
+    background: linear-gradient(90deg, rgb(244, 216, 81), rgb(213, 85, 84));
+    color: white;
+    border: 1px solid #bbb;
+    padding: 10px 20px;
+    margin-top: 1px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+    transition: 1s;
+    width: 40%;
+}
+
+.login-btn:hover{
+    transform: scale(1.1);
+    background-color: white;
+    color: #C04848;
+    border: 2px solid #C04848;
+}
+
+.form-end{
+    margin-bottom: 70px;
+}
+
+.login_form a{
+    margin-left: 2px;
+    color: black;
+    text-decoration: none;
+}
+
+.login_form a:hover{
+    text-decoration: underline;
+    color: rgb(213, 85, 84);
+}
+
+/*///////////Inventory.js header styling////////////*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+    margin: 3.5% auto;
+    background-image: inherit;
+}
+
+.inner-header{
+    display: flex;
+}
+
+.inner-header h3{
+    margin-top: 12px;
+}
+
+header .btn{
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 6px 11px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+    height: 51px;
+    transition: 0.5s;
+}
+
+header h1{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+header .btn:hover{
+    transform: scale(1.05);
+}
+
+.searchbar-cover{
+    width: 95%;
+    margin: auto;
+}
+
+.searchbar{
+    width: 99%;
+    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+}
+
+/*////Table styling//////*/
+table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 0.9em;
+    width: 95%;
+    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+.table-h1{
+    text-align: center;
+}
+
+table thead tr{
+    /* background-color: #f3f3f3; */
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    height: 50px;
+    border-bottom: 1px solid #c3c3c3;
+    border-top: 1px solid #c3c3c3;
+}
+
+table th:first-of-type, table td:first-of-type{
+    border-left: 1px solid #dddddd;
+}
+
+table th:last-of-type, table td:last-of-type{
+    border-right: 1px solid #dddddd;
+}
+
+span.divider{
+    display: inline-block;
+    width: 0;
+    height: 1em;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.name-th{
+    padding-left: 10px;
+}
+
+.arrived{
+    color: green;
+}
+.lowStock{
+    color: orange;
+}
+
+.noStock{
+    color: red;
+}
+
+/* .SS-th, table tbody tr td:nth-of-type(4){
+    width: 50px;
+    background-color: pink;
+} */
+
+/* .arrived{
+    color: green;
+    margin-left: 111px;
+}
+
+.shipping{
+    margin-left: 100px;
+}
+
+.ordered{
+    margin-left: 103px;
+}
+
+.lowStock{
+    color: orange;
+}
+
+.noStock{
+    color: red;
+    margin-left: 67px;
+} */
+
+/* table thead tr th:last-of-type{
+    background-color: red;
+} */
+
+table th{
+    padding-left: 9px;
+}
+
+tr, td{
+    padding: 12px 10px;
+    padding-bottom: 45px;
+}
+
+tr, td:first-of-type{
+    padding-left: 10px;
+}
+
+tbody tr td:first-of-type{
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+tbody tr{
+    border-bottom: 1px solid #dddddd;
+    /* background-color: white; */
+}
+
+table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type{
+    border-bottom: 2px solid #071C3B;
+}
+
+/*/////darkgray  a //////*/
+
+table .actions-in{
+    margin-right: 10px;
+}
+
+
+
+/*////////ADD ITEM/ EDIT ITEM.JS STYLING///////////*/
+.add-form {
+    position: absolute;
+    bottom: 1;
+    background-image: linear-gradient(90deg, rgb(116, 57, 219, 0.8), rgb(198, 111, 188, 0.7) 48%, rgb(247, 148, 77, 0.5));
+    overflow: hidden;
+    width: 100%;
+    animation: Slide_Down 1s ease-out;
+}
+
+.form hr.solid{
+    border: 2.4px solid rgb(72,0,72,0.2);
+    border-radius: 60px;
+    width: 90%;
+    margin: auto;
+}
+
+/*///rgba(0,0,0,0.5)////*/
+
+.form{
+    background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8));
+    color: white;
+    opacity: 0.9;
+    text-align: center;
+    width: 30%;
+    height: 500px;
+    margin: 2% auto;
+    border-radius: 10px;
+    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+}
+
+.form h1{
+    padding-top: 20px;
+}
+
+.add-form .form-control{
+    display: flex;
+    margin: 20px auto;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.form .edit-name{
+    margin-top: 15px;
+}
+
+.form .form-control input{
+    padding: 7px 0 7px 15px;
+    border: none;
+    border-radius: 15px;
+    width: 74%;
+}
+
+.form .form-control input:focus{
+    outline: 1.6px solid #C04848;
+}
+
+.form .form-control-out{
+    margin-top: 20px;
+}
+
+.form .form-control-date{
+    padding: 7px 0 7px 15px;
+    border-radius: 20px;
+    border: none;
+    color: #C04848;
+    outline: 1.6px solid #C04848;
+}
+
+.form .btn{
+    background: rgb(72,0,72,0.4);
+    color: white;
+    border: 2px solid #bbb;
+    padding: 10px 20px;
+    margin-top: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+    transition: 1s;
+}
+
+.form .btn:hover{
+    transform: scale(1.1);
+    background-color: white;
+    color: #C04848;
+    border: 2px solid #C04848;
+}
+
+.form .cancelBtn{
+    margin-left: 20px;
+    background-color: rgb(255,0,0,0.5);
+}
+
+.form .cancelBtn:hover{
+    border: 1px solid red;
+    color: red;
+}
+
+@keyframes Slide_Down{
+    0%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 930px){
+    body{
+        background: no-repeat center fixed;
+        background-image: linear-gradient(90deg, rgb(116, 57, 219, 0.8), rgb(198, 111, 188, 0.8) 48%, rgb(247, 148, 77, 0.8)), url("./bg2.jpg");
+        background-size: contain;
+    }
+    .welcome{
+        width: 100%;
+        font-size: 18px;
+        margin-top: 10%;
+    }
+
+    .welcome button{
+        padding: 8.5px 17px;
+        font-size: 12px;
+    }
+
+    .cover{
+        width: 100%;
+        height: 500px;
+    }
+
+    .login_form{
+        width: 90%;
+        height: 80%;
+        margin: 10% auto;
+        background: white;
+    }
+
+    .login_form a{
+        color: rgb(213, 85, 84);
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 630px){
+    .welcome{
+        font-size: 10px;
+    }
+    
+    .welcome button{
+        padding: 7px 14px;
+        font-size: 10px;
+    }
+    
+
+    header{
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+        z-index: 0;
+    }
+
+    .inner-header{
+        margin: auto;
+    }
+
+    header .btn{
+        border-radius: 0%;
+    }
+
+    .login-dec{
+        width: 100%;
+        height: 10px;
+    }
+
+    table{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 0.8rem;
+    }
+
+    table tr{
+        margin: 0;
+        padding: 0;
+    }
+
+    table td{
+        margin: 0;
+        padding: 0;
+        padding-bottom: 45px;
+    }
+
+    table th{
+        margin: 0;
+        padding: 0;
+    }
+
+    table thead{
+        margin: 0;
+        padding: 0;
+    }
+
+    table tbody{
+        margin: 0;
+        padding: 0;
+    }
+
+    table .actions-in{
+        margin-left: 0;
+    }
+
+    .add-form {
+        position: absolute;
+        height: 100%;
+        background-color: white;
+        overflow: hidden;
+        width: 100%;
+        animation: Slide_Down 1s ease-out;
+        margin: 0;
+    }
+
+    .form{
+        background-color: black;
+        color: white;
+        opacity: 0.9;
+        text-align: center;
+        width: 90%;
+        height: 500px;
+        margin: 3% auto;
+        border-radius: 10px;
+        box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+    }
+
+    .form-control input{
+        width: 70%;
+    }
+
+    .form-control label{
+        margin-top: 10px;
+        font-size: 0.8rem;
+    }
+}

@@ -7,7 +7,7 @@ const EditItem = ({onSaveEdit, onEditClick, onCancel}) => {
     const [messageType, setMessageType] = useState("")
     const id = onEditClick.id
     const name = onEditClick.name
-    const [stockStatus, setStockStatus] = useState(onEditClick.stockStatus)
+    const [stockStatus, setStockStatus] = useState(onEditClick.status)
     const [quantity, setQuantity] = useState(onEditClick.quantity)
     const [status, setStatus] = useState(onEditClick.status)
     const [date, setDate] = useState(onEditClick.date)

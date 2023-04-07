@@ -13,15 +13,15 @@ const TableData = ({data, onDelete, onEdit}) => {
 
     useEffect(() => {
         if(data.stockStatus === "Arrived"){
-            setStatus(<BsCheckLg className="arrived" style={{cursor: 'pointer'}} />)
+            setStatus(<BsCheckLg className="arrived" />)
         }else if(data.stockStatus === "noStock"){
-            setStatus(<MdError className="noStock" style={{cursor: 'pointer'}}  />)
+            setStatus(<MdError className="noStock" />)
         }else if(data.stockStatus === "lowStock"){
-            setStatus(<GoAlert className="lowStock" style={{cursor: 'pointer'}} />)
+            setStatus(<GoAlert className="lowStock" />)
         }else if(data.stockStatus === "Shipping"){
-            setStatus(<MdLocalShipping className="shipping" style={{cursor: 'pointer'}} />)
+            setStatus(<MdLocalShipping className="shipping" />)
         }else if(data.stockStatus === "Ordered"){
-            setStatus(<BiShoppingBag className="ordered" style={{cursor: 'pointer'}} />)
+            setStatus(<BiShoppingBag className="ordered" />)
         }
     }, [data.stockStatus]);
 

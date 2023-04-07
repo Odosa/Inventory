@@ -12,7 +12,6 @@
 /build
 
 .env
-db.json
 
 # misc
 .DS_Store
