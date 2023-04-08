@@ -1,7 +1,6 @@
 body{
     background: linear-gradient(90deg, rgb(116, 57, 219), rgb(198, 111, 188, 0.7) 48%, rgb(247, 148, 77, 0.5)), url("./bg2.jpg") no-repeat right fixed;
     background-size: contain;
-    opacity: 0.6;
 }
 
 * {
