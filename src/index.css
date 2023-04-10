@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*////////////Login.js styling/////////////*/
+.body1{
+    background-image: url("../public/landingpage.png");
+    background-blend-mode: multiply;
+    height: 1125px;
+    padding: 15%;
+}
+.body2{
+    background-image: url("../public/ppf.jpg");
+    padding: 15%;
+    height: 1127px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body3{
+    background-image: url("../public/ppg.jpg");
+    height: 1000px; 
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain , cover;
+    opacity: 0.9;
+}
+.body4{
+    background-color: transparent;
+    border: 10px;
+    min-width: 100%;
+    position: relative;
+    opacity: 0.9;
+}
+.cover{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    /* margin-top: 120px; */
+    width: 35em;
+    border-radius: 1em;
+    box-shadow: 0 0.188em 1.550em black;
+    height: 450px;
+    background: linear-gradient(rgb(100,10,72,10.18));
+    color: black;
+    
+}
+
+.login_form{
+    height: 80%;
+    text-align: center;
+    width: 90%;
+    margin: 3% auto;
+    
+}
+
+.login_form h1{
+    margin-bottom: 50px;
+}
+
+.login_form .form-control{
+    display: flex;
+    margin: 30px auto;
+    width: 90%;
+    justify-content: space-between;
+    
+}
+
+.cover .login-dec{
+    border: none;
+    background-color: rgb(229, 226, 226);
+    border-radius: 7px;
+    text-align: center;
+    padding: 0.7em;
+    width: 80%;
+    margin: auto;
+}
+
+.login_form label{
+    margin-right: 10px;
+}
+
+.cover input:focus{
+    outline: 1.6px solid #C04848;
+}
+
+.login-btn{
+    background-color: rgb(72,0,72,0.4);
+    color: white;
+    border: 2px solid #bbb;
+    padding: 10px 20px;
+    margin-top: 1px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+    transition: 1s;
+    width: 40%;
+}
+
+.login-btn:hover{
+    transform: scale(1.1);
+    background-color: white;
+    color: #C04848;
+    border: 2px solid #C04848;
+}
+
+.login_form_end{
+    text-align: center;
+    
+}
+
+.login_form a{
+    margin-left: 2px;
+    color: white;
+}
+
+.login_form a:hover{
+    color: black;
+}
+
+/*///////////Inventory.js header styling////////////*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+    margin: 3.5% auto;
+}
+
+.inner-header{
+    display: flex;
+}
+
+.inner-header h3{
+    margin-top: 12px;
+}
+
+header .btn{
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 6px 11px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+    height: 51px;
+    transition: 0.5s;
+}
+
+header h1{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+header .btn:hover{
+    transform: scale(1.05);
+}
+
+.searchbar-cover{
+    width: 95%;
+    margin: auto;
+}
+
+.searchbar{
+    width: 99%;
+    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+}
+
+/*////Table styling//////*/
+table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 0.9em;
+    width: 95%;
+}
+
+table thead tr{
+    background-color: #f3f3f3;
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    height: 50px;
+    border-bottom: 1px solid #c3c3c3;
+    border-top: 1px solid #c3c3c3;
+}
+
+table th:first-of-type, table td:first-of-type{
+    border-left: 1px solid #dddddd;
+}
+
+table th:last-of-type, table td:last-of-type{
+    border-right: 1px solid #dddddd;
+}
+
+span.divider{
+    display: inline-block;
+    width: 0;
+    height: 1em;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.name-th{
+    padding-left: 10px;
+}
+
+/* .SS-th, table tbody tr td:nth-of-type(4){
+    width: 50px;
+    background-color: pink;
+} */
+
+/* .arrived{
+    color: green;
+    margin-left: 111px;
+}
+
+.shipping{
+    margin-left: 100px;
+}
+
+.ordered{
+    margin-left: 103px;
+}
+
+.lowStock{
+    color: orange;
+}
+
+.noStock{
+    color: red;
+    margin-left: 67px;
+} */
+
+/* table thead tr th:last-of-type{
+    background-color: red;
+} */
+
+table th{
+    padding-left: 9px;
+}
+
+tr, td{
+    padding: 12px 10px;
+    padding-bottom: 45px;
+}
+
+tr, td:first-of-type{
+    padding-left: 10px;
+}
+
+tbody tr td:first-of-type{
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+tbody tr{
+    border-bottom: 1px solid #dddddd;
+    background-color: white;
+}
+
+table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type{
+    border-bottom: 2px solid black;
+}
+
+/*/////darkgray  a //////*/
+
+table .actions-in{
+    margin-right: 10px;
+}
+
+
+
+/*////////ADD ITEM/ EDIT ITEM.JS STYLING///////////*/
+.add-form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 85%;
+    background-color: transparent;
+    overflow: hidden;
+    width: 100%;
+    animation: Slide_Down 1s ease-out;
+    
+}
+
+.form hr.solid{
+    border: 2.4px solid rgb(72,0,72,0.2);
+    border-radius: 60px;
+    width: 90%;
+    margin: auto;
+}
+
+/*///rgba(0,0,0,0.5)////*/
+
+.form{
+    /* background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8)); */
+    background-color: transparent;
+    padding: 20%;
+    color:black;
+    opacity: 0.9;
+    text-align: center;
+    width: 25%;
+    height: 50px;
+    margin: 3% auto;
+    border-radius: 100px;
+    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+}
+
+.form h1{
+    padding-top: 20px;
+}
+
+.form-control{
+    display: flex;
+    margin: 20px auto;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.form .edit-name{
+    margin-top: 15px;
+}
+
+.form .form-control input{
+    padding: 7px 0 7px 15px;
+    border: none;
+    border-radius: 15px;
+    width: 74%;
+}
+
+.form .form-control input:focus{
+    outline: 1.6px solid #C04848;
+}
+
+.form .form-control-out{
+    margin-top: 20px;
+}
+
+.form .form-control-date{
+    padding: 7px 0 7px 15px;
+    border-radius: 20px;
+    border: none;
+    color: #C04848;
+    outline: 1.6px solid #C04848;
+}
+
+.form .btn{
+    background: rgb(72,0,72,0.4);
+    color: white;
+    border: 2px solid #bbb;
+    padding: 10px 20px;
+    margin-top: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+    transition: 1s;
+}
+
+.form .btn:hover{
+    transform: scale(1.1);
+    background-color: white;
+    color: #C04848;
+    border: 2px solid #C04848;
+}
+
+.form .cancelBtn{
+    margin-left: 20px;
+    background-color: rgb(255,0,0,0.5);
+}
+
+.form .cancelBtn:hover{
+    border: 1px solid red;
+    color: red;
+}
+
+@keyframes Slide_Down{
+    0%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/*////////welcome page styling///////////*/
+.welcome{
+    height: 1027px;
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+    color: pink;
+    overflow: hidden;
+    background: #C04848;  /* fallback for old browsers */
+    background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8)), url("../public/landingpage.png");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8)), url("../public/landingpage.png"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+    justify-content: center;
+}
+
+.welcome button{
+    background: linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8));
+    color: white;
+    border: relative;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+    
+}
+.welcome:hover{
+    background-color: black;
+}
+.welcome button:hover{
+    background-color: black;
+}
+
+
+
+@media screen and (max-width: 630px){
+    header{
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+        z-index: 0;
+    }
+
+    .inner-header{
+        margin: auto;
+    }
+
+    header .btn{
+        border-radius: 0%;
+    }
+
+    table{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 0.8rem;
+    }
+
+    table tr{
+        margin: 0;
+        padding: 0;
+    }
+
+    table td{
+        margin: 0;
+        padding: 0;
+    }
+
+    table th{
+        margin: 0;
+        padding: 0;
+    }
+
+    table thead{
+        margin: 0;
+        padding: 0;
+    }
+
+    table tbody{
+        margin: 0;
+        padding: 0;
+    }
+
+    table .actions-in{
+        margin-left: 0;
+    }
+
+    .add-form {
+        position: absolute;
+        height: 100%;
+        background-color: white;
+        overflow: hidden;
+        width: 100%;
+        animation: Slide_Down 1s ease-out;
+        margin: 0;
+    }
+
+    .form{
+        background-color: black;
+        color: white;
+        opacity: 0.9;
+        text-align: center;
+        width: 90%;
+        height: 500px;
+        margin: 3% auto;
+        border-radius: 10px;
+        box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+    }
+
+    .form-control input{
+        width: 70%;
+    }
+
+    .form-control label{
+        margin-top: 10px;
+        font-size: 0.8rem;
+    }
+}
+
+.arrived{
+    color: green;
+}
+.lowStock{
+    color: orange;
+}
+
+.noStock{
+    color: red;
+}
+
+
