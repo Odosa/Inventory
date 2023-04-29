@@ -32,7 +32,6 @@ return(
             <div className="form-control">
                 <label>Username: </label>
                 <input type="text" 
-                placeholder="Username"
                 className="login-dec"
                 id='username'
                 ref={userRef}
@@ -45,7 +44,6 @@ return(
                 <label>Password: </label>
                 <input 
                     type="password" 
-                    placeholder="Password"
                     className="login-dec"
                     id='password'
                     onChange={(e) => setPwd(e.target.value)}
