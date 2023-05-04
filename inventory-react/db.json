@@ -1,0 +1,49 @@
+{
+  "tableData": [
+    {
+      "id": 2,
+      "name": "VR Google",
+      "quantity": "30",
+      "stockStatus": "Arrived",
+      "status": "Arrived",
+      "date": "2020-02-12",
+      "comment": "Returned by mega"
+    },
+    {
+      "id": 3,
+      "name": "Wireless Mouse",
+      "quantity": "40",
+      "stockStatus": "Shipping",
+      "status": "Shipping",
+      "date": "2023-02-18",
+      "comment": "Given to imate"
+    },
+    {
+      "id": 4,
+      "name": "Light Pen",
+      "quantity": "60",
+      "stockStatus": "Ordered",
+      "status": "Ordered",
+      "date": "2023-02-18",
+      "comment": "Given to imate"
+    },
+    {
+      "id": 5,
+      "name": "Electric Bell",
+      "quantity": "20",
+      "stockStatus": "Arrived",
+      "status": "Arrived",
+      "date": "2022-02-25",
+      "comment": "Returned by tega"
+    },
+    {
+      "id": 6,
+      "name": "Electric Door Handle",
+      "quantity": "15",
+      "stockStatus": "Arrived",
+      "status": "Arrived",
+      "date": "2020-02-12",
+      "comment": "Returned by mega"
+    }
+  ]
+}
